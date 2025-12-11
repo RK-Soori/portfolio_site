@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soori.Dev</title>
+    
+    <link rel="icon" href="source/image.png" type="image/png">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+
+    <canvas id="bg-canvas"></canvas>
+
+    <nav>
+        <div class="logo">
+            <img src="source/image.png" alt="Logo">
+            Soori.Dev
+        </div>
+
+        <div class="nav-right">
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills & Certs</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button id="theme-toggle" onclick="toggleTheme()">
+                <i class="fas fa-moon"></i>
+            </button>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-text">
+            <h3>Hi I'm <span class="highlight">E.A.R.K. Sooriyaarachchi</span></h3>
+            <h2>A Computer Engineering Undergraduate</h2>
+            <div class="hero-headline">
+                <span style="display:block; font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-color);">Writing</span>
+                <span class="txt-type" style="font-size: 4rem; line-height: 1.1;" data-wait="3000" data-words='["Clean", "Scalable", "Efficient", "Robust"]'></span>
+                <br>
+                <span style="font-size: 1.2rem; font-weight: 400; color: var(--text-color);">code that speaks for itself.</span>
+            </div>
+            <a href="#projects" class="btn">View My Work</a>
+            <a href="source/cv.pdf" class="btn-outline" download="Soori_CV.pdf">Download CV</a>
+        </div>
+        <div class="hero-image">
+            <img src="source/image.png" alt="E.A.R.K. Sooriyaarachchi Illustration" draggable="false" onmousedown="return false">
+        </div>
+    </section>
+
+    <section id="about" class="container">
+        <div class="about-box reveal">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-text">
+                <p style="margin-bottom: 1.5rem;">
+                    I am a Computer Engineering Student with a deep passion for the rapidly evolving world of technology. 
+                    My interests lie at the intersection of <strong>Robotics</strong>, <strong>Electronic Engineering</strong>, and <strong>Software Development</strong>.
+                </p>
+                <p>
+                    I enjoy exploring the synergy between hardware and software, whether it's programming microcontrollers 
+                    or building full-stack web applications. I am constantly learning new technologies to build innovative solutions 
+                    that are both efficient and scalable.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="container">
+        <div class="tech-wrapper reveal">
+            <h2 class="section-title">Skills</h2>
+            <p class="section-desc">
+                A blend of software development tools and hardware engineering competencies.
+            </p>
+            
+            <div class="scroller-container">
+                <div class="scroller" id="scroller">
+                    <div class="tech-track">
+                        <div class="tech-item"><i class="fas fa-robot"></i><span>Robotics</span></div>
+                        <div class="tech-item"><i class="fas fa-microchip"></i><span>Electronics</span></div>
+                        <div class="tech-item"><i class="fab fa-cuttlefish"></i><span>C/C++</span></div>
+                        <div class="tech-item"><i class="fas fa-network-wired"></i><span>Networks</span></div>
+                        <div class="tech-item"><i class="fab fa-python"></i><span>Python</span></div>
+                        <div class="tech-item"><i class="fab fa-java"></i><span>Java</span></div>
+                        <div class="tech-item"><i class="fab fa-react"></i><span>React</span></div>
+                        <div class="tech-item"><i class="fab fa-node"></i><span>Node.js</span></div>
+                        <div class="tech-item"><i class="fab fa-html5"></i><span>HTML5</span></div>
+                        <div class="tech-item"><i class="fab fa-git-alt"></i><span>Git</span></div>
+                    </div>
+                    
+                    <div class="tech-track">
+                        <div class="tech-item"><i class="fas fa-robot"></i><span>Robotics</span></div>
+                        <div class="tech-item"><i class="fas fa-microchip"></i><span>Electronics</span></div>
+                        <div class="tech-item"><i class="fab fa-cuttlefish"></i><span>C/C++</span></div>
+                        <div class="tech-item"><i class="fas fa-network-wired"></i><span>Networks</span></div>
+                        <div class="tech-item"><i class="fab fa-python"></i><span>Python</span></div>
+                        <div class="tech-item"><i class="fab fa-java"></i><span>Java</span></div>
+                        <div class="tech-item"><i class="fab fa-react"></i><span>React</span></div>
+                        <div class="tech-item"><i class="fab fa-node"></i><span>Node.js</span></div>
+                        <div class="tech-item"><i class="fab fa-html5"></i><span>HTML5</span></div>
+                        <div class="tech-item"><i class="fab fa-git-alt"></i><span>Git</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="section-title" style="margin-top: 3rem;">Certifications</h2>
+            <div class="grid-layout">
+                <div class="inner-card">
+                    <div style="text-align: center; margin-bottom: 1rem; color: var(--primary-color);">
+                        <i class="fas fa-certificate fa-3x"></i>
+                    </div>
+                    <h3>CCNA: Introduction to Networks</h3>
+                    <p style="font-weight: bold; color: var(--text-color);">ID: 2025-CCNA-CE42</p>
+                    <p>Cisco Certified Network Associate credential validating ability to manage and optimize network systems.</p>
+                </div>
+                <div class="inner-card">
+                     <div style="text-align: center; margin-bottom: 1rem; color: var(--primary-color);">
+                        <i class="fas fa-code fa-3x"></i>
+                    </div>
+                    <h3>Web Development Bootcamp</h3>
+                    <p>Completed intensive full-stack development course covering React, Node.js, and SQL.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="container">
+        <h2 class="reveal" style="text-align: center; margin-bottom: 2rem; font-size: 2rem; color: var(--primary-color);">Featured Projects</h2>
+        <div class="grid-layout">
+            <div class="card reveal">
+                <h3><i class="fas fa-chess"></i> Chess Application</h3>
+                <p>An Android mobile game built with Kotlin. Features AI logic and move validation.</p>
+                <div style="margin-top:15px;">
+                    <a href="https://github.com/RK-Soori/ChessBoardBlindFinal" target="_blank" style="margin-right: 15px;">GitHub Repo</a>
+                    <a href="https://rk-soori.github.io/ChessBoardBlindFinal/" target="_blank">Live Demo</a>
+                </div>
+            </div>
+            
+            <div class="card reveal">
+                <h3><i class="fas fa-utensils"></i> Recipe Platform</h3>
+                <p>A community-driven recipe sharing hub built with PHP & MySQL. Features user auth and social tools.</p>
+                <div style="margin-top:15px;">
+                    <a href="https://github.com/sda2003/recipe_sharing_platform_main" target="_blank">GitHub Repo</a>
+                </div>
+            </div>
+
+            <div class="card reveal">
+                <h3><i class="fas fa-globe"></i> Portfolio Site</h3>
+                <p>A responsive personal website with Dark/Light mode switching built with JS.</p>
+                <div style="margin-top:15px;"><a href="https://github.com/RK-Soori/portfolio_site" target="_blank">GitHub Repo</a></div>
+            </div>
+            <div class="card reveal">
+                <h3><i class="fas fa-server"></i> Network Sim</h3>
+                <p>Cisco Packet Tracer simulation for a small office network configuration.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="container">
+        <h2 class="reveal" style="text-align: center; margin-bottom: 3rem; font-size: 2rem; color: var(--primary-color);">Get In Touch</h2>
+        <div class="contact-wrapper reveal">
+            <div class="contact-info">
+                <h3 style="color: var(--primary-color); margin-top:0;">Contact Details</h3>
+                <p style="font-size: 0.9rem; margin-bottom: 2rem;">Click on the email or phone number to copy it to your clipboard.</p>
+                <div class="info-item">
+                    <label><i class="fas fa-envelope"></i> Email</label>
+                    <div class="copy-text" onclick="copyToClipboard('kavindasooriyaarachchi@gmail.com', 'emailTooltip')">
+                        kavindasooriyaarachchi@gmail.com
+                        <i class="far fa-copy"></i>
+                        <span class="tooltip" id="emailTooltip">Copied!</span>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <label><i class="fas fa-phone-alt"></i> Phone</label>
+                    <div class="copy-text" onclick="copyToClipboard('+94752925517', 'phoneTooltip')">
+                        +94 75 292 5517
+                        <i class="far fa-copy"></i>
+                        <span class="tooltip" id="phoneTooltip">Copied!</span>
+                    </div>
+                </div>
+                <div class="social-area">
+                    <label>Social Profiles</label>
+                    <div class="social-links" style="margin-top: 10px;">
+                        <a href="https://github.com/RK-Soori" target="_blank" class="social-icon" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/kavi-soori-19a46b224" target="_blank" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form-box">
+                <form id="contactForm" action="https://formspree.io/f/meoyrndz" method="POST">
+                    <h3 style="margin-top:0;">Send a Message</h3>
+                    <label>Name</label>
+                    <input type="text" id="name" name="name" required>
+                    <div class="error-msg" id="nameError">Name cannot be empty.</div>
+                    <label>Email</label>
+                    <input type="email" id="email" name="email" required>
+                    <div class="error-msg" id="emailError">Please enter a valid email address.</div>
+                    <label>Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                    <div class="error-msg" id="messageError">Message cannot be empty.</div>
+                    <button type="submit" class="btn" style="width:100%;">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 R.K. Sooriyaarachchi. All Rights Reserved.</p>
+    </footer>
+
+    <script src="js/background-3d.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/typewriter.js"></script>
+    <script src="js/scroller.js"></script>
+
+</body>
+</html>
